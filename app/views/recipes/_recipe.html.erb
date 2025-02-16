@@ -1,0 +1,6 @@
+<div class="recipe-card">
+  <h2><%= recipe.title %></h2>
+  <p><strong>Dificultad:</strong> <%= format_difficulty(recipe.difficulty) %></p>
+
+  <%= link_to "Ver Receta", recipe_path(recipe), class: "btn-view" %>
+</div>

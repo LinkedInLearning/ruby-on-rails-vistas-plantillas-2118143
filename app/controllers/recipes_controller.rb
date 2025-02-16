@@ -16,6 +16,10 @@ class RecipesController < ApplicationController
     redirect_to recipe_path(@recipe, from: "new", message: "Receta creada con éxito")
   end
 
+  def index
+    @recipes = Recipe.all
+  end
+
   def show
     @recipe = Recipe.find_by(id: params[:id])
     @bean_count = count_beans(@recipe)
