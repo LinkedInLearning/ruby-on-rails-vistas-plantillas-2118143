@@ -8,13 +8,12 @@
     <%= form.text_field :title %>
 
     <label>Selecciona los granos de café y su cantidad:</label>
-  <div class="bean-selection">
-    <div class="bean-group">
-      <%= select_tag "recipe[recipe_beans_attributes][][bean_id]", options_from_collection_for_select(Bean.all, :id, :name), { prompt: "Selecciona un grano" , class: "bean-select" } %>
-      <%= text_field_tag "recipe[recipe_beans_attributes][][amount]", nil, placeholder: "Cantidad en g", class: "bean-amount" %>
+    <div class="bean-selection">
+      <div class="bean-group">
+        <%= select_tag "recipe[recipe_beans_attributes][][bean_id]", options_from_collection_for_select(Bean.all, :id, :name), { prompt: "Selecciona un grano" , class: "bean-select" } %>
+        <%= text_field_tag "recipe[recipe_beans_attributes][][amount]", nil, placeholder: "Cantidad en g", class: "bean-amount" %>
+      </div>
     </div>
-  </div>
-
 
     <label for="description">Descripción:</label>
     <%= form.text_area :description %>
@@ -22,8 +21,11 @@
     <label for="instructions">Instrucciones:</label>
     <%= form.text_area :instructions %>
 
-    <label for="difficulty">Dificultad:</label>
-    <%= form.select :difficulty, [1,2,3] %>
+      <label for="difficulty">Dificultad:</label>
+    <%= form.select :difficulty, 
+                [['Fácil', 1], ['Intermedio', 2], ['Avanzado', 3]], 
+                { prompt: "Selecciona la dificultad" }, 
+                { class: "custom-select" } %>
 
     <%= form.button "Guardar Receta", class: "recipe-form button" %>
   <% end %>
