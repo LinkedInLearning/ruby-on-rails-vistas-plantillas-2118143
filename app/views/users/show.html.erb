@@ -1,0 +1,23 @@
+<h1><%= @user.email %></h1>
+
+<div class="profile-container">
+  <div class="profile-info">
+    <p><strong>Miembro desde:</strong> <%= @user.created_at.strftime("%d/%m/%Y") %></p>
+  </div>
+
+  <div class="profile-recipes">
+    <h2>Mis Recetas</h2>
+    <% if @user.recipes.any? %>
+      <ul>
+        <% @user.recipes.each do |recipe| %>
+          <li>
+            <%= link_to recipe.title, recipe_path(recipe) %>
+            <span class="recipe-meta">Dificultad: <%= recipe.difficulty %></span>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No ha creado recetas aún.</p>
+    <% end %>
+  </div>
+</div>

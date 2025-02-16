@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Cafetario" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app %>
+
+    <!-- Google Fonts -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+    <header class="main-header">
+      <h1>☕ Bienvenida a tu Cafetario ☕</h1>
+    </header>
+
+      <!-- Flash Messages -->
+    <% if flash[:alert] %>
+      <div class="flash flash-alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="flash flash-notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+
+    <div class="container">
+      <%= yield %> 
+    </div>
+
+    <footer class="main-footer">
+      <p>&copy; <%= Time.now.year %> Cafetario - Disfruta el mejor café de especialidad ☕</p>
+    </footer>
+  </body>
+</html> 

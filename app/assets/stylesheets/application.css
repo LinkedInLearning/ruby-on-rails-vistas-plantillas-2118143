@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+body {
+  font-family: 'Shadows Into Light', serif;
+  background-color: #f5f1e9; 
+  color: #3e2723; 
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1, h2, h3 {
+  font-family: 'Shadows Into Light', regular;
+  color: #af7968;
+  text-align: center;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Arial', regular;
+  color: #4e342e;
+  font-weight: 600;
+}
+
+button, .btn {
+  background-color: #6d4c41;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #4e342e;
+}
+
+/* HEADER */
+.main-header {
+  background-color: #6D4C41; 
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f5f2;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.main-footer {
+  background-color: #3E2723; 
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: relative;
+  bottom: 0;
+  font-size: 18px;
+  width: 100%;
+}
+
+.flash {
+  padding: 10px;
+  margin: 10px auto;
+  width: 50%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.flash-notice {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.flash-alert {
+  background-color: #D32F2F; /* Rojo */
+  color: white;
+}
+

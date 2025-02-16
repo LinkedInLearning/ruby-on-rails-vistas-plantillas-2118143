@@ -1,0 +1,12 @@
+<h1>Top Recetas</h1>
+
+<div class="recipe-container">
+  <p>Estas son las recetas más recientes:</p>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li><%= link_to recipe.title, recipe_path(recipe) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Volver a Recetas", recipes_path, class: "btn-back" %>
