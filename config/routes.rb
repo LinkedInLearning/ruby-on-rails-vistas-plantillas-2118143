@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   Rails.application.routes.draw do
     namespace :api do
-      resources :recipes, only: [:index, :show]
+      resources :recipes, only: [:index, :show, :create]
     end
     
     # Rutas: /recipes
