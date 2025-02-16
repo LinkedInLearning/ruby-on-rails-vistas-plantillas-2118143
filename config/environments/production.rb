@@ -15,6 +15,14 @@ Rails.application.configure do
   # Turn on fragment caching in view templates.
   config.action_controller.perform_caching = true
 
+  # Desactiva la compilación dinámica
+  config.assets.compile = false   
+  # Usa nombres de archivo con hash para evitar caché
+  config.assets.digest = true   
+  # Permite a Rails servir los assets precompilados  
+  config.serve_static_assets = true  
+
+
   # Cache assets for far-future expiry since they are all digest stamped.
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
 
