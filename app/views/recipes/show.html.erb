@@ -30,7 +30,7 @@
   <p><strong>Instrucciones:</strong></p>
   <p><%= @recipe.instructions %></p>
 
-  <p><strong>Dificultad:</strong> <%= @recipe.difficulty %></p>
+  <p><strong>Dificultad:</strong> <%= format_difficulty(@recipe.difficulty) %></p>
 
   <p>
     <strong>Creado por:</strong> 

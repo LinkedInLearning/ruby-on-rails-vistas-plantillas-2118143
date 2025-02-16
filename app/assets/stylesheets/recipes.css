@@ -176,4 +176,15 @@ ul li a:hover {
   box-shadow: 0 0 5px rgba(93, 64, 55, 0.5);
 }
 
+.difficulty {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.easy { background: rgb(23, 99, 23); }
+.medium { background: rgb(123, 87, 22); }
+.hard { background: rgb(109, 26, 26); }
+
 
