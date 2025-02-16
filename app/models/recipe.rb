@@ -48,4 +48,28 @@ class Recipe < ApplicationRecord
   def self.created_today
     Recipe.where("DATE(created_at) = ?", Date.today)
   end
+
+  def to_json(options = {})
+    super({
+      only: [:id, :title, :description],
+      methods: [:difficulty_label],
+      include: {
+        user: { only: [:id, :name] },
+        beans: { only: [:id, :name] }
+      }
+    }.merge(options))
+  end
+
+  def difficulty_label
+    case difficulty
+    when 1
+      "💡 Fácil"
+    when 2
+      "🌝 Intermedio"
+    when 3
+      "💪 Avanzado"
+    else
+      "Desconocido"
+    end
+  end
 end
