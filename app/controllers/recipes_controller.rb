@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
     else
       respond_to do |format|
         format.html  
-        format.json { render json: @recipe }
+        format.json 
       end
     end 
   end
