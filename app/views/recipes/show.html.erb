@@ -11,7 +11,21 @@
 <%# Este comentario no aparece en la salida HTML %>
 
 <div class="recipe-container">
-  <p><strong>Descripción:</strong> <%= @recipe.description %></p>
+  <p><strong>Descripción (Escapada por defecto):</strong></p>
+  <p><%= @recipe.description %></p>
+
+  <p><strong>Descripción con `html_safe`:</strong></p>
+  <%# Desescapa el HTML y permite etiquetas como <b>, <p>, <br>, etc. %>
+  <p><%= @recipe.description.html_safe %></p>
+
+  <p><strong>Descripción con `raw`:</strong></p>
+  <%# Hace lo mismo que html_safe, pero más flexible para estructuras de datos. %>
+  <p><%= raw @recipe.description %></p>
+
+  <p><strong>Descripción con `h` (Escapada manualmente):</strong></p>
+  <%# Escapa los caracteres HTML, evitando ataques XSS. Usar cuando no quieras mostrar HTML en la salida. %>
+  <p><%= h(@recipe.description) %></p>
+
   
   <p><strong>Instrucciones:</strong></p>
   <p><%= @recipe.instructions %></p>
