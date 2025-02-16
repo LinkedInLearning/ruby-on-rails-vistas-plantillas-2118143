@@ -1,5 +1,15 @@
 <h1 class="recipe-title"><%= @recipe.title %></h1>
 
+<%# Esto es un comentario en ERB y no aparecerá en el HTML %>
+
+<% if @recipe.difficulty == 1 %>
+  <h3>💡 Esta receta es fácil de preparar.</h3>
+<% end %>
+
+<%= "Esta línea se imprimirá en el HTML." %>
+
+<%# Este comentario no aparece en la salida HTML %>
+
 <div class="recipe-container">
   <p><strong>Descripción:</strong> <%= @recipe.description %></p>
   
@@ -10,13 +20,13 @@
 
   <p>
     <strong>Creado por:</strong> 
-    <%= link_to @recipe.user.email, user_path(@recipe.user) %>
+    <%= link_to @recipe.user.email, user_path(@recipe.user) -%>
   </p>
 
   <p><strong>Granos de café utilizados:</strong></p>
   <ul>
     <% @recipe.recipe_beans.each do |recipe_bean| %>
-      <li><%= recipe_bean.bean.name %> - <%= recipe_bean.amount %>g</li>
+      <li><%= recipe_bean.bean.name %> - <%= recipe_bean.amount %> gr</li>
     <% end %>
   </ul>
 
