@@ -23,7 +23,17 @@ module Api
     end
 
     def show
-      render json: @recipe
+      @recipe = Recipe.find(params[:id])
+
+      # si no tuvieramos jbuilder: (teniendo jbuilder Rails lo prioriza)
+      render json: @recipe.to_json(
+        only: [:id, :title, :description],
+        methods: [:difficulty_label],
+        include: {
+          user: { only: [:id, :name] },
+          beans: { only: [:id, :name] }
+        }
+      ), pretty: true
     end
 
     def recipe_params
