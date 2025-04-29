@@ -34,7 +34,7 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/carla-urrea-stabile).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
-[lil-thumbnail-url]: https:
+[lil-course-url]: https://www.linkedin.com/learning/domina-ruby-on-rails-vistas-plantillas-y-manipulacion-de-datos-en-frontend
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQFT3RybNiB7KQ/learning-public-crop_675_1200/B4DZZ9JjMbHIAY-/0/1745856378432?e=2147483647&v=beta&t=do8ryOwHBnaNcoF-R9QR6PR8P5wyUlGTIaBg9GU8fmM
 
 [1]: # (End of ES-Instruction ###############################################################################################)
