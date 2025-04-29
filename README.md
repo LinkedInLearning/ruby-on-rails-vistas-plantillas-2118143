@@ -19,10 +19,13 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 ## Instalación
 
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-   - [software]
+   - Ruby 3.2+ o [RVM](https://rvm.io/)
+   - [Ruby on Rails](https://github.com/rails/rails)
 
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. [Instrucciones específicas del curso].
+3. Desde tu terminal, ejecuta `bundle install` para instalar las dependencias del proyecto
+4. Para poner el servidor en marcha ejecuta `rails s` en tu terminal
+5. Visita `http://localhost:3000/recipes/new` para ver una de las vistas de la aplicación (puedes ver todas las rutas ejecutando `rails routes`)
 
 ### Docente
 
@@ -31,7 +34,7 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/carla-urrea-stabile).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
-[lil-thumbnail-url]: https:
+[lil-course-url]: https://www.linkedin.com/learning/domina-ruby-on-rails-vistas-plantillas-y-manipulacion-de-datos-en-frontend
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQFT3RybNiB7KQ/learning-public-crop_675_1200/B4DZZ9JjMbHIAY-/0/1745856378432?e=2147483647&v=beta&t=do8ryOwHBnaNcoF-R9QR6PR8P5wyUlGTIaBg9GU8fmM
 
 [1]: # (End of ES-Instruction ###############################################################################################)
